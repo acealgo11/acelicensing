@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ace Algo — Proprietary Automation Technology, Licensed</title>
+<meta name="description" content="Ace Algo develops and licenses proprietary data-automation technology that helps operators make faster, more consistent decisions.">
+
+<!-- Fonts: preload + async swap, no render block -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=DM+Sans:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=DM+Sans:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=DM+Sans:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap"></noscript>
+
+<style>
+  :root{
+    --black:#000000;
+    --navy:#0A0A1A;
+    --blue:#3533CD;
+    --gold:#C9A84C;
+    --gold-light:#E8C96A;
+    --white:#FFFFFF;
+    --white-soft:#F0F0F0;
+    --text-secondary:#A0A0B0;
+    --font-display:'Poppins', Arial, sans-serif;
+    --font-body:'DM Sans', Arial, sans-serif;
+    --font-mono:'IBM Plex Mono', 'Courier New', monospace;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--font-body);
+    background:var(--black);
+    color:var(--white);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;cursor:pointer;border:none;}
+  section{padding:88px 24px;}
+  .wrap{max-width:1120px;margin:0 auto;}
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:16px;height:1px;
+    background:var(--gold);
+    display:inline-block;
+  }
+  h1,h2,h3{font-family:var(--font-display);font-weight:700;letter-spacing:-.01em;}
+  h2{font-size:clamp(28px,4vw,40px);margin-bottom:16px;}
+  h3{font-size:19px;margin-bottom:10px;font-weight:600;}
+  p{color:var(--text-secondary);}
+  .section-sub{max-width:560px;color:var(--text-secondary);font-size:16px;margin-bottom:48px;}
+  .light p{color:#4a4a55;}
+  .light .section-sub{color:#4a4a55;}
+
+  .light{background:var(--white-soft);color:var(--black);}
+  .light h1,.light h2,.light h3{color:var(--black);}
+  .navy{background:var(--navy);}
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    background:rgba(0,0,0,0.72);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .nav-inner{
+    max-width:1120px;margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 24px;
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:18px;color:var(--white);}
+  .logo img{height:26px;width:auto;}
+  .nav-cta{
+    background:var(--gold);
+    color:var(--black);
+    font-family:var(--font-body);
+    font-weight:500;
+    font-size:14px;
+    padding:11px 20px;
+    border-radius:2px;
+    transition:background .15s ease;
+    white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--gold-light);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:170px 24px 96px;
+    background:
+      radial-gradient(ellipse at 78% 12%, rgba(53,51,205,0.35), transparent 55%),
+      var(--black);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid{
+    max-width:1120px;margin:0 auto;
+    display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(34px,5.2vw,54px);
+    line-height:1.08;
+    margin-bottom:22px;
+  }
+  .hero h1 .accent{color:var(--gold-light);}
+  .hero-sub{
+    font-size:17px;
+    color:var(--text-secondary);
+    max-width:480px;
+    margin-bottom:34px;
+  }
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--gold);color:var(--black);
+    padding:14px 26px;font-weight:500;font-size:15px;border-radius:2px;
+    transition:background .15s ease;
+  }
+  .btn-primary:hover{background:var(--gold-light);}
+  .btn-ghost{
+    border:1px solid rgba(255,255,255,0.25);
+    color:var(--white);
+    padding:13px 26px;font-weight:500;font-size:15px;border-radius:2px;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .btn-ghost:hover{border-color:var(--gold);background:rgba(201,168,76,0.08);}
+
+  /* Signature diagram */
+  .diagram{
+    position:relative;width:100%;aspect-ratio:1/1;max-width:420px;margin:0 auto;
+  }
+  .diagram svg{width:100%;height:100%;}
+  .node-path{
+    stroke:rgba(201,168,76,0.5);
+    stroke-width:1;
+    fill:none;
+    stroke-dasharray:6 6;
+    animation:dash 22s linear infinite;
+  }
+  @keyframes dash{to{stroke-dashoffset:-240;}}
+  .node-box{fill:var(--navy);stroke:rgba(255,255,255,0.14);stroke-width:1;}
+  .node-box.active{stroke:var(--gold);}
+  .node-label{font-family:var(--font-mono);font-size:9px;fill:var(--text-secondary);letter-spacing:.06em;}
+  .node-label.gold{fill:var(--gold-light);}
+  .node-dot{fill:var(--gold);}
+
+  /* ---------- TRUST STRIP ---------- */
+  .trust-strip{
+    background:var(--navy);
+    padding:36px 24px;
+    border-top:1px solid rgba(255,255,255,0.06);
+    border-bottom:1px solid rgba(255,255,255,0.06);
+  }
+  .trust-row{
+    max-width:1120px;margin:0 auto;
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;
+  }
+  .trust-item{flex:1 1 180px;text-align:center;}
+  .trust-item .num{font-family:var(--font-mono);font-size:22px;color:var(--gold-light);display:block;margin-bottom:4px;}
+  .trust-item .lbl{font-size:12.5px;color:var(--text-secondary);letter-spacing:.03em;}
+
+  /* ---------- CATALOGUE (light) ---------- */
+  .catalogue-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  }
+  .mod-card{
+    background:var(--white);
+    border:1px solid #e2e2e6;
+    border-top:3px solid var(--blue);
+    padding:30px 26px;
+    border-radius:2px;
+  }
+  .mod-code{
+    font-family:var(--font-mono);
+    font-size:11px;color:var(--blue);
+    letter-spacing:.08em;
+    margin-bottom:16px;
+    display:block;
+  }
+  .mod-card p{font-size:14.5px;}
+
+  /* ---------- PROCESS (navy) ---------- */
+  .process-list{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+    border-top:1px solid rgba(255,255,255,0.1);
+  }
+  .process-item{
+    padding:28px 20px 28px 0;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    position:relative;
+  }
+  .process-item:not(:last-child){border-right:1px solid rgba(255,255,255,0.1);padding-right:24px;}
+  .process-index{font-family:var(--font-mono);font-size:12px;color:var(--gold);margin-bottom:14px;display:block;}
+  .process-item h3{font-size:16px;margin-bottom:8px;}
+  .process-item p{font-size:14px;}
+
+  /* ---------- INDUSTRIES (light) ---------- */
+  .industry-row{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+  }
+  .industry-tile{
+    background:var(--white);border:1px solid #e2e2e6;
+    padding:22px 20px;border-radius:2px;
+  }
+  .industry-tile h3{font-size:15px;margin-bottom:6px;}
+  .industry-tile p{font-size:13.5px;}
+
+  /* ---------- SECURITY (dark) ---------- */
+  .sec-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+  .sec-list{list-style:none;}
+  .sec-list li{
+    display:flex;gap:14px;padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .sec-list li:first-child{padding-top:0;}
+  .sec-dot{
+    width:6px;height:6px;border-radius:50%;background:var(--gold);
+    margin-top:8px;flex-shrink:0;
+  }
+  .sec-list strong{display:block;font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:4px;color:var(--white);}
+  .sec-list span{color:var(--text-secondary);font-size:14px;}
+  .sec-note{
+    font-size:12.5px;color:var(--text-secondary);
+    border-left:2px solid var(--gold);
+    padding:12px 16px;margin-top:24px;background:rgba(255,255,255,0.02);
+  }
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta{
+    background:linear-gradient(115deg, #000000 20%, #3533CD 150%);
+    text-align:left;
+    padding:96px 24px;
+  }
+  .final-inner{max-width:640px;}
+  .final-cta h2{margin-bottom:14px;}
+  .final-cta p{color:rgba(255,255,255,0.75);margin-bottom:34px;font-size:16px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--black);padding:48px 24px 32px;border-top:1px solid rgba(255,255,255,0.08);}
+  .foot-inner{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:28px;}
+  .foot-brand{font-family:var(--font-display);font-weight:700;font-size:16px;margin-bottom:8px;}
+  .foot-meta{font-size:12.5px;color:var(--text-secondary);max-width:360px;}
+  .foot-links{display:flex;gap:28px;flex-wrap:wrap;}
+  .foot-links a{font-size:13px;color:var(--text-secondary);}
+  .foot-links a:hover{color:var(--gold-light);}
+  .foot-bottom{
+    max-width:1120px;margin:32px auto 0;padding-top:20px;
+    border-top:1px solid rgba(255,255,255,0.06);
+    font-size:12px;color:#5a5a66;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;gap:40px;}
+    .diagram{max-width:300px;}
+    .catalogue-grid{grid-template-columns:1fr;}
+    .process-list{grid-template-columns:1fr 1fr;}
+    .process-item:nth-child(2){border-right:none;}
+    .industry-row{grid-template-columns:1fr 1fr;}
+    .sec-grid{grid-template-columns:1fr;gap:32px;}
+    .trust-row{justify-content:flex-start;}
+    .trust-item{flex:1 1 42%;}
+  }
+  @media (max-width:520px){
+    section{padding:64px 20px;}
+    .hero{padding-top:150px;}
+    .process-list{grid-template-columns:1fr;}
+    .process-item{border-right:none !important;padding-right:0;}
+    .industry-row{grid-template-columns:1fr;}
+    .cta-row{flex-direction:column;}
+    .btn-primary,.btn-ghost{text-align:center;}
+    .foot-inner{flex-direction:column;}
+  }
+
+  /* reduced motion */
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .node-path{animation:none;}
+  }
+
+  /* focus visibility */
+  a:focus-visible,button:focus-visible{outline:2px solid var(--gold-light);outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="#top" class="logo">
+      <img src="https://i.ibb.co/fzv8dPxb/Blue-white.png" alt="Ace Algo" width="26" height="26" loading="eager">
+      Ace Algo
+    </a>
+    <a href="mailto:hello@acealgo.ai?subject=Licensing%20Briefing%20Request" class="nav-cta">Request a Briefing</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">UK-registered software company</span>
+        <h1>Decision infrastructure, <span class="accent">licensed</span> to the teams who run on it.</h1>
+        <p class="hero-sub">Ace Algo develops proprietary data-automation technology and licenses it to operators who need faster, more consistent decisions — without building or maintaining the engine themselves.</p>
+        <div class="cta-row">
+          <a href="mailto:hello@acealgo.ai?subject=Licensing%20Briefing%20Request" class="btn-primary">Request a Licensing Briefing</a>
+        </div>
+      </div>
+      <div class="diagram" aria-hidden="true">
+        <svg viewBox="0 0 400 400">
+          <path class="node-path" d="M 90 100 L 200 200 L 90 300"/>
+          <path class="node-path" d="M 200 200 L 320 200"/>
+          <rect class="node-box" x="30" y="70" width="120" height="60" rx="2"/>
+          <circle class="node-dot" cx="42" cy="82" r="3"/>
+          <text class="node-label gold" x="42" y="100">MOD-01 · INGEST</text>
+          <text class="node-label" x="42" y="114">Data normalisation</text>
+
+          <rect class="node-box active" x="140" y="170" width="120" height="60" rx="2"/>
+          <circle class="node-dot" cx="152" cy="182" r="3"/>
+          <text class="node-label gold" x="152" y="200">MOD-02 · ENGINE</text>
+          <text class="node-label" x="152" y="214">Decision logic</text>
+
+          <rect class="node-box" x="30" y="270" width="120" height="60" rx="2"/>
+          <circle class="node-dot" cx="42" cy="282" r="3"/>
+          <text class="node-label gold" x="42" y="300">MOD-03 · RULES</text>
+          <text class="node-label" x="42" y="314">Governed thresholds</text>
+
+          <rect class="node-box" x="290" y="170" width="90" height="60" rx="2"/>
+          <circle class="node-dot" cx="302" cy="182" r="3"/>
+          <text class="node-label gold" x="302" y="200">OUTPUT</text>
+          <text class="node-label" x="302" y="214">API / dashboard</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="trust-strip" style="padding-top:36px;padding-bottom:36px;">
+    <div class="trust-row">
+      <div class="trust-item"><span class="num">GB</span><span class="lbl">UK-registered company</span></div>
+      <div class="trust-item"><span class="num">B2B</span><span class="lbl">Licensing-only model</span></div>
+      <div class="trust-item"><span class="num">API</span><span class="lbl">Deploys into existing stacks</span></div>
+      <div class="trust-item"><span class="num">24/7</span><span class="lbl">Ongoing support & updates</span></div>
+    </div>
+  </section>
+
+  <!-- CATALOGUE -->
+  <section id="catalogue" class="light">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--blue);">What we license</span>
+      <h2>Three modules. One licence.</h2>
+      <p class="section-sub">Each module is licensed independently or as a stack, and integrates into your existing systems rather than replacing them.</p>
+      <div class="catalogue-grid">
+        <div class="mod-card">
+          <span class="mod-code">MOD-01 · INGEST</span>
+          <h3>Data Ingestion & Normalisation</h3>
+          <p>Pulls structured and unstructured data from your existing sources and reshapes it into a consistent format the decision engine can act on — no manual reconciliation.</p>
+        </div>
+        <div class="mod-card" style="border-top-color:var(--gold);">
+          <span class="mod-code" style="color:var(--gold);">MOD-02 · ENGINE</span>
+          <h3>Decision Engine</h3>
+          <p>A configurable rules-and-model layer that turns normalised data into recommended or automated actions, tuned to thresholds your team defines and controls.</p>
+        </div>
+        <div class="mod-card">
+          <span class="mod-code">MOD-03 · INTERFACE</span>
+          <h3>Operational Interfaces</h3>
+          <p>Dashboards and APIs that surface every decision the engine makes, with a full audit trail, so your team can review, override, or approve without digging through logs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="navy">
+    <div class="wrap">
+      <span class="eyebrow">How licensing works</span>
+      <h2>From first call to live deployment.</h2>
+      <p class="section-sub">A structured, technical process — built for teams who need to evaluate before they commit.</p>
+      <div class="process-list">
+        <div class="process-item">
+          <span class="process-index">01</span>
+          <h3>Technical scoping call</h3>
+          <p>We map your existing data sources and decision points against our module set to confirm fit before anything is proposed.</p>
+        </div>
+        <div class="process-item">
+          <span class="process-index">02</span>
+          <h3>Sandbox deployment</h3>
+          <p>A contained environment using your own (or representative) data, so your team can test behaviour before any licence is signed.</p>
+        </div>
+        <div class="process-item">
+          <span class="process-index">03</span>
+          <h3>Licensing agreement</h3>
+          <p>Clear terms covering usage rights, data handling, support levels, and renewal — reviewed by your legal team, not just ours.</p>
+        </div>
+        <div class="process-item">
+          <span class="process-index">04</span>
+          <h3>Rollout & support</h3>
+          <p>Phased deployment into production with an assigned technical contact and scheduled module updates for the life of the licence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="light">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--blue);">Built for operators</span>
+      <h2>Where the modules get used.</h2>
+      <p class="section-sub">The technology is domain-agnostic by design — these are the operating environments our current licensees deploy it in.</p>
+      <div class="industry-row">
+        <div class="industry-tile"><h3>Operations & Logistics</h3><p>Routing and scheduling decisions across high-volume, time-sensitive workflows.</p></div>
+        <div class="industry-tile"><h3>Back-Office Processing</h3><p>Reducing manual review load on repetitive, rules-based document and data workflows.</p></div>
+        <div class="industry-tile"><h3>Resource Allocation</h3><p>Matching supply against demand signals in near real time, with full override control.</p></div>
+        <div class="industry-tile"><h3>Compliance Monitoring</h3><p>Flagging exceptions against configured thresholds for human review, not silent auto-action.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECURITY -->
+  <section class="navy">
+    <div class="wrap sec-grid">
+      <div>
+        <span class="eyebrow">Governance</span>
+        <h2>Your data. Your thresholds. Your override.</h2>
+        <p class="section-sub" style="margin-bottom:0;">Licensing our technology doesn't mean handing over control of your operations. Every deployment is scoped, reviewable, and reversible.</p>
+      </div>
+      <ul class="sec-list">
+        <li>
+          <span class="sec-dot"></span>
+          <div>
+            <strong>Deployed inside your environment</strong>
+            <span>Modules run within your infrastructure or a contracted private instance — your data does not need to leave your control to be processed.</span>
+          </div>
+        </li>
+        <li>
+          <span class="sec-dot"></span>
+          <div>
+            <strong>Configurable thresholds, not black boxes</strong>
+            <span>Every automated action is governed by rules your team sets and can adjust — nothing acts outside the boundaries you define.</span>
+          </div>
+        </li>
+        <li>
+          <span class="sec-dot"></span>
+          <div>
+            <strong>Full audit trail</strong>
+            <span>Every decision the engine makes is logged, timestamped, and reviewable — exportable for your own compliance and audit processes.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="wrap">
+      <p class="sec-note">Specific certifications, regulatory registrations, and data-processing terms are confirmed during the technical scoping call and set out in the licensing agreement.</p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" id="contact">
+    <div class="final-inner">
+      <span class="eyebrow">Get started</span>
+      <h2>Request a technical licensing briefing.</h2>
+      <p>A 30-minute call with our technical team to map your data sources and decision points against our current module set — no obligation, no sales pitch.</p>
+      <a href="mailto:hello@acealgo.ai?subject=Licensing%20Briefing%20Request" class="btn-primary">Email hello@acealgo.ai</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-brand">Ace Algo</div>
+      <p class="foot-meta">Ace Algo is a UK-registered software company that develops and licenses proprietary data-automation technology on a licensing basis.</p>
+    </div>
+    <div class="foot-links">
+      <a href="mailto:hello@acealgo.ai?subject=Licensing%20Briefing%20Request">Contact</a>
+    </div>
+  </div>
+  <div class="foot-bottom wrap">
+    © 2026 Ace Algo. All rights reserved. Registered in the United Kingdom.
+  </div>
+</footer>
+
+</body>
+</html>
