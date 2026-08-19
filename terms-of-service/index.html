@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Ace Algo</title>
+<meta name="description" content="Terms of Service for Ace Algo Ltd. Please read these terms carefully before using our platform.">
+<link rel="canonical" href="https://acealgo.ai/terms-of-service">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap"></noscript>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+:root{
+  --black:#000000;
+  --navy:#0A0A1A;
+  --blue:#3533CD;
+  --gold:#C9A84C;
+  --gold-light:#E8C96A;
+  --white:#FFFFFF;
+  --white-soft:#F0F0F0;
+  --font-display:'Poppins',sans-serif;
+  --font-body:'DM Sans','Helvetica Neue',sans-serif;
+  --nav-h:80px;
+  --max-w:1140px;
+  --pad-x:clamp(20px,5vw,64px);
+}
+body{font-family:var(--font-body);background:var(--black);color:var(--white);line-height:1.6;overflow-x:hidden;font-size:16px}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);background:rgba(0,0,0,0.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(201,168,76,.4);transition:background .3s}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--pad-x);height:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center}
+.nav-logo img{height:52px;width:auto;display:block}
+.nav-links{display:flex;align-items:center;gap:36px;list-style:none}
+.nav-links a{font-size:15px;font-weight:700;color:#ffffff;transition:color .2s;letter-spacing:.01em}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold);color:#000;font-family:var(--font-body);font-weight:700;font-size:14px;padding:10px 26px;border-radius:4px;transition:background .18s,box-shadow .18s;white-space:nowrap;position:relative;overflow:hidden}
+.nav-cta::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.35) 50%,transparent 60%);transform:translateX(-100%);animation:shimmer 3s infinite}
+.nav-cta:hover{background:var(--gold-light);box-shadow:0 0 24px rgba(201,168,76,.4)}
+.nav-mobile-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.nav-mobile-toggle span{width:24px;height:2px;background:#fff;border-radius:2px;display:block}
+@media(max-width:860px){
+  .nav-links{display:none}
+  .nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:var(--nav-h);left:0;right:0;background:rgba(0,0,0,.97);padding:24px var(--pad-x) 32px;border-bottom:1px solid rgba(201,168,76,.3)}
+  .nav-links.open li{width:100%;border-bottom:1px solid rgba(255,255,255,.07)}
+  .nav-links.open a{display:block;padding:16px 0;font-size:16px}
+  .nav-mobile-toggle{display:flex}
+  .nav-cta-desktop{display:none!important}
+  .nav-links.open .nav-cta-li{display:block;margin-top:20px;width:100%}
+  .nav-links.open .nav-cta-li a{display:block;text-align:center;padding:14px;background:var(--gold);color:#000;border-radius:4px;font-weight:700}
+}
+@media(min-width:861px){.nav-cta-li{display:none}}
+@keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(200%)}}
+
+/* PAGE */
+.page-wrap{max-width:800px;margin:0 auto;padding:calc(var(--nav-h) + 64px) var(--pad-x) 100px}
+.page-eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:16px}
+.page-title{font-family:var(--font-display);font-size:clamp(32px,4vw,52px);font-weight:900;color:#fff;letter-spacing:-.02em;margin-bottom:12px;line-height:1.1}
+.page-meta{font-size:14px;color:#666;margin-bottom:56px}
+.page-meta span{color:#888}
+
+.policy h2{font-family:var(--font-display);font-size:20px;font-weight:700;color:#fff;margin:44px 0 14px;padding-bottom:10px;border-bottom:1px solid rgba(201,168,76,.2)}
+.policy h2:first-child{margin-top:0}
+.policy p{font-size:15px;color:rgba(255,255,255,.78);line-height:1.8;margin-bottom:14px}
+.policy ul{margin:10px 0 14px 20px;display:flex;flex-direction:column;gap:8px}
+.policy li{font-size:15px;color:rgba(255,255,255,.78);line-height:1.7}
+.policy a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.policy strong{color:#fff;font-weight:600}
+.policy .highlight-box{background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.25);border-radius:8px;padding:20px 24px;margin:24px 0;font-size:14px;color:rgba(255,255,255,.85);line-height:1.7}
+.policy .warning-box{background:rgba(255,80,80,.06);border:1px solid rgba(255,80,80,.2);border-radius:8px;padding:20px 24px;margin:24px 0;font-size:14px;color:rgba(255,255,255,.85);line-height:1.7}
+
+/* FOOTER */
+#footer{background:var(--black);border-top:1px solid rgba(255,255,255,.06);padding:64px 0 40px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:48px}
+@media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.footer-grid{grid-template-columns:1fr}}
+.footer-brand img{height:30px;width:auto;margin-bottom:16px}
+.footer-brand p{font-size:14px;color:#999;line-height:1.7;max-width:260px}
+.footer-col h4{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col a{font-size:14px;color:#999;transition:color .2s}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:28px;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-copy{font-size:13px;color:#888}
+.footer-disc{font-size:11px;color:#666;line-height:1.7;max-width:700px}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" aria-label="Ace Algo home" class="nav-logo">
+      <img src="https://i.ibb.co/fzv8dPxb/Blue-white.png" alt="Ace Algo" width="150" height="52" loading="eager">
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/#how">How It Works</a></li>
+      <li><a href="/#performance">Performance</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li class="nav-cta-li"><a href="https://app.iclosed.io/e/acealgo/ace-algo-advisory-call">Apply Now</a></li>
+    </ul>
+    <a href="https://app.iclosed.io/e/acealgo/ace-algo-advisory-call" class="nav-cta nav-cta-desktop" id="nav-cta-desktop">Apply Now</a>
+    <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<div class="page-wrap">
+  <span class="page-eyebrow">Legal</span>
+  <h1 class="page-title">Terms of Service</h1>
+  <p class="page-meta">Ace Algo Ltd &nbsp;·&nbsp; <span>Last updated: June 2025</span></p>
+
+  <div class="policy">
+
+    <div class="highlight-box">
+      Please read these Terms of Service carefully before using the Ace Algo platform or website. By accessing our website, submitting an application, or using our services, you agree to be bound by these terms. If you do not agree, please do not use our services.
+    </div>
+
+    <h2>1. About Ace Algo</h2>
+    <p>Ace Algo Ltd ("Ace Algo", "we", "us", "our") is a company registered in England and Wales. We provide an AI-powered algorithmic trading software platform that, once onboarded, operates autonomously within a client's own regulated brokerage account at Vantage Markets.</p>
+    <p>Ace Algo is a technology and software company. We are <strong>not</strong> a regulated financial adviser, investment manager, or broker. Nothing on our website or in our communications constitutes financial advice.</p>
+
+    <h2>2. Eligibility</h2>
+    <p>To use our services you must:</p>
+    <ul>
+      <li>Be at least 18 years of age</li>
+      <li>Be legally permitted to engage in trading activity in your jurisdiction</li>
+      <li>Have completed and passed our application process</li>
+      <li>Have opened and funded a brokerage account in your own name at Vantage Markets</li>
+    </ul>
+    <p>We reserve the right to decline any application without providing a reason.</p>
+
+    <h2>3. Nature of the Service</h2>
+    <p>Ace Algo provides automated trading software that connects to your personal brokerage account via API. The software executes trades on your behalf according to its underlying algorithms. You understand and agree that:</p>
+    <ul>
+      <li>The software operates autonomously — we do not manually place trades on your behalf</li>
+      <li>All funds remain in your own brokerage account at all times</li>
+      <li>We do not hold, manage, or have access to your capital</li>
+      <li>You retain full control over your brokerage account and can disconnect the software or withdraw funds at any time</li>
+      <li>Past performance of the algorithm does not guarantee future results</li>
+    </ul>
+
+    <div class="warning-box">
+      <strong>Risk Warning:</strong> Trading CFDs and forex involves a significant risk of loss and may not be suitable for all investors. You may lose some or all of your invested capital. Only invest money you can afford to lose. This service does not guarantee profits.
+    </div>
+
+    <h2>4. Not Financial Advice</h2>
+    <p>Nothing provided by Ace Algo — including this website, any communications, performance data, or advisory calls — constitutes financial advice, investment advice, or a recommendation to invest. All information is provided for informational and educational purposes only.</p>
+    <p>You are solely responsible for your own investment decisions. We strongly recommend you seek independent financial advice before investing if you are unsure whether this service is appropriate for your circumstances.</p>
+
+    <h2>5. The 90-Day Trial</h2>
+    <p>Ace Algo offers a 90-day satisfaction guarantee. If you are not satisfied with the service within the first 90 days of your account going live, you may request a full refund of any fees paid to Ace Algo. This guarantee:</p>
+    <ul>
+      <li>Applies to fees paid directly to Ace Algo Ltd only — it does not cover trading losses incurred in your brokerage account</li>
+      <li>Requires the account to have been live and actively running for the full 90-day period</li>
+      <li>Must be claimed within the 90-day window from your go-live date</li>
+      <li>Is subject to our reasonable discretion in cases of suspected misuse</li>
+    </ul>
+    <p>To claim your refund, contact us via <a href="https://wa.me/447462123336">WhatsApp</a> within the applicable period.</p>
+
+    <h2>6. Fees and Payment</h2>
+    <p>Our fee structure is agreed with you individually during the onboarding process and documented in your service agreement. Fees may be structured as a one-time payment, recurring subscription, or performance-based arrangement depending on your package.</p>
+    <p>All fees are exclusive of any applicable taxes unless stated otherwise. You are responsible for any taxes applicable to you in your jurisdiction.</p>
+
+    <h2>7. Client Responsibilities</h2>
+    <p>As a client, you agree to:</p>
+    <ul>
+      <li>Provide accurate and truthful information during the application and onboarding process</li>
+      <li>Maintain sufficient funds in your brokerage account to allow the algorithm to operate effectively</li>
+      <li>Not interfere with or override the algorithm's trades without notifying us first</li>
+      <li>Ensure your brokerage account remains active and in good standing</li>
+      <li>Notify us promptly of any material changes to your financial circumstances</li>
+      <li>Comply with all applicable laws and regulations in your jurisdiction</li>
+    </ul>
+
+    <h2>8. Intellectual Property</h2>
+    <p>All content on the Ace Algo website — including but not limited to text, graphics, logos, software, algorithms, and performance data — is the intellectual property of Ace Algo Ltd and is protected by applicable copyright and intellectual property laws.</p>
+    <p>You may not copy, reproduce, distribute, or create derivative works from any of our content without our prior written consent. Access to our platform does not grant you any licence to our underlying technology or algorithms.</p>
+
+    <h2>9. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by applicable law, Ace Algo Ltd shall not be liable for:</p>
+    <ul>
+      <li>Any trading losses incurred in your brokerage account</li>
+      <li>Losses arising from market conditions, technical failures, or events outside our reasonable control</li>
+      <li>Indirect, consequential, special, or punitive damages of any kind</li>
+      <li>Loss of profits, revenue, data, or business opportunity</li>
+      <li>Any actions or omissions of third-party providers including Vantage Markets</li>
+    </ul>
+    <p>Our total liability to you in connection with these terms shall not exceed the total fees paid by you to Ace Algo in the 12 months preceding the claim.</p>
+
+    <h2>10. Indemnification</h2>
+    <p>You agree to indemnify and hold harmless Ace Algo Ltd, its directors, employees, and agents from any claims, losses, damages, or expenses (including legal fees) arising from your use of our services, your breach of these terms, or your violation of any applicable law.</p>
+
+    <h2>11. Termination</h2>
+    <p>Either party may terminate the service agreement with reasonable written notice. We reserve the right to suspend or terminate your access immediately if:</p>
+    <ul>
+      <li>You breach any of these terms</li>
+      <li>We reasonably suspect fraudulent or unlawful activity</li>
+      <li>Your brokerage account is suspended or closed</li>
+      <li>Continuing the service would expose us to legal or regulatory risk</li>
+    </ul>
+    <p>Upon termination, you remain responsible for any outstanding fees. The algorithm will be disconnected from your brokerage account and your data will be handled in accordance with our Privacy Policy.</p>
+
+    <h2>12. Force Majeure</h2>
+    <p>We will not be liable for any failure or delay in performance caused by circumstances beyond our reasonable control, including but not limited to: acts of God, market outages, regulatory changes, cyberattacks, or failures of third-party infrastructure.</p>
+
+    <h2>13. Governing Law and Disputes</h2>
+    <p>These terms are governed by and construed in accordance with the laws of England and Wales. Any disputes arising from these terms or our services shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+    <p>We encourage you to contact us in the first instance to resolve any dispute informally before pursuing formal legal proceedings.</p>
+
+    <h2>14. Changes to These Terms</h2>
+    <p>We may update these Terms of Service from time to time. We will notify active clients of material changes. Continued use of our services following notification constitutes acceptance of the updated terms. The current version of these terms is always available at <a href="https://acealgo.ai/terms-of-service">acealgo.ai/terms-of-service</a>.</p>
+
+    <h2>15. Entire Agreement</h2>
+    <p>These Terms of Service, together with our Privacy Policy and any individual service agreement signed by you, constitute the entire agreement between you and Ace Algo Ltd regarding our services and supersede all prior agreements, representations, or understandings.</p>
+
+    <h2>16. Contact Us</h2>
+    <p>If you have any questions about these Terms of Service, please contact us:</p>
+    <p>
+      <strong>Ace Algo Ltd</strong><br>
+      Registered in England and Wales<br>
+      Website: <a href="https://acealgo.ai">acealgo.ai</a><br>
+      WhatsApp: <a href="https://wa.me/447462123336">+44 7462 123336</a>
+    </p>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container" style="max-width:var(--max-w);margin:0 auto;padding:0 var(--pad-x)">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://i.ibb.co/fzv8dPxb/Blue-white.png" alt="Ace Algo" width="100" loading="lazy">
+        <p>A fully automated AI trading algorithm for investors who want their capital working harder — without the charts, the stress, or the screen time.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="/#how">How It Works</a></li>
+          <li><a href="/#performance">Performance</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="https://app.iclosed.io/e/acealgo/ace-algo-advisory-call">Apply Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://www.trustpilot.com/review/acealgo.ai" target="_blank" rel="noopener">Reviews</a></li>
+          <li><a href="https://wa.me/447462123336" target="_blank" rel="noopener">Contact</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Ace Algo Ltd. All rights reserved. United Kingdom.</p>
+      <p class="footer-disc">Risk Warning: Trading CFDs and forex carries a high level of risk and may not be suitable for all investors. Past performance is not indicative of future results. The value of your investments can go down as well as up. You could lose some or all of your invested capital. This website does not constitute financial advice. Ace Algo is not a regulated financial advisor.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle=document.getElementById('nav-toggle');
+  var links=document.getElementById('nav-links');
+  if(toggle){
+    toggle.addEventListener('click',function(){links.classList.toggle('open')});
+    links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open')})});
+  }
+  window.addEventListener('scroll',function(){
+    document.getElementById('nav').style.background=window.scrollY>50?'rgba(0,0,0,0.97)':'rgba(0,0,0,0.88)';
+  },{passive:true});
+})();
+</script>
+</body>
+</html>
