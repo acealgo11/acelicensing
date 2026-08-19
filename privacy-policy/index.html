@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Ace Algo</title>
+<meta name="description" content="Privacy Policy for Ace Algo Ltd. How we collect, use and protect your personal data.">
+<link rel="canonical" href="https://acealgo.ai/privacy-policy">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap"></noscript>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+:root{
+  --black:#000000;
+  --navy:#0A0A1A;
+  --blue:#3533CD;
+  --gold:#C9A84C;
+  --gold-light:#E8C96A;
+  --white:#FFFFFF;
+  --white-soft:#F0F0F0;
+  --font-display:'Poppins',sans-serif;
+  --font-body:'DM Sans','Helvetica Neue',sans-serif;
+  --nav-h:80px;
+  --max-w:1140px;
+  --pad-x:clamp(20px,5vw,64px);
+}
+body{font-family:var(--font-body);background:var(--black);color:var(--white);line-height:1.6;overflow-x:hidden;font-size:16px}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);background:rgba(0,0,0,0.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(201,168,76,.4);transition:background .3s}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--pad-x);height:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center}
+.nav-logo img{height:52px;width:auto;display:block}
+.nav-links{display:flex;align-items:center;gap:36px;list-style:none}
+.nav-links a{font-size:15px;font-weight:700;color:#ffffff;transition:color .2s;letter-spacing:.01em}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold);color:#000;font-family:var(--font-body);font-weight:700;font-size:14px;padding:10px 26px;border-radius:4px;transition:background .18s,box-shadow .18s;white-space:nowrap;position:relative;overflow:hidden}
+.nav-cta::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.35) 50%,transparent 60%);transform:translateX(-100%);animation:shimmer 3s infinite}
+.nav-cta:hover{background:var(--gold-light);box-shadow:0 0 24px rgba(201,168,76,.4)}
+.nav-mobile-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.nav-mobile-toggle span{width:24px;height:2px;background:#fff;border-radius:2px;display:block}
+@media(max-width:860px){
+  .nav-links{display:none}
+  .nav-links.open{display:flex;flex-direction:column;align-items:flex-start;gap:0;position:fixed;top:var(--nav-h);left:0;right:0;background:rgba(0,0,0,.97);padding:24px var(--pad-x) 32px;border-bottom:1px solid rgba(201,168,76,.3)}
+  .nav-links.open li{width:100%;border-bottom:1px solid rgba(255,255,255,.07)}
+  .nav-links.open a{display:block;padding:16px 0;font-size:16px}
+  .nav-mobile-toggle{display:flex}
+  .nav-cta-desktop{display:none!important}
+  .nav-links.open .nav-cta-li{display:block;margin-top:20px;width:100%}
+  .nav-links.open .nav-cta-li a{display:block;text-align:center;padding:14px;background:var(--gold);color:#000;border-radius:4px;font-weight:700}
+}
+@media(min-width:861px){.nav-cta-li{display:none}}
+@keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(200%)}}
+
+/* PAGE */
+.page-wrap{
+  max-width:800px;
+  margin:0 auto;
+  padding:calc(var(--nav-h) + 64px) var(--pad-x) 100px;
+}
+.page-eyebrow{
+  font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gold);display:block;margin-bottom:16px;
+}
+.page-title{
+  font-family:var(--font-display);
+  font-size:clamp(32px,4vw,52px);
+  font-weight:900;color:#fff;
+  letter-spacing:-.02em;
+  margin-bottom:12px;
+  line-height:1.1;
+}
+.page-meta{font-size:14px;color:#666;margin-bottom:56px}
+.page-meta span{color:#888}
+
+/* Policy content */
+.policy h2{
+  font-family:var(--font-display);
+  font-size:20px;font-weight:700;color:#fff;
+  margin:44px 0 14px;
+  padding-bottom:10px;
+  border-bottom:1px solid rgba(201,168,76,.2);
+}
+.policy h2:first-child{margin-top:0}
+.policy p{font-size:15px;color:rgba(255,255,255,.78);line-height:1.8;margin-bottom:14px}
+.policy ul{margin:10px 0 14px 20px;display:flex;flex-direction:column;gap:8px}
+.policy li{font-size:15px;color:rgba(255,255,255,.78);line-height:1.7}
+.policy a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.policy strong{color:#fff;font-weight:600}
+.policy .highlight-box{
+  background:rgba(201,168,76,.07);
+  border:1px solid rgba(201,168,76,.25);
+  border-radius:8px;
+  padding:20px 24px;
+  margin:24px 0;
+  font-size:14px;color:rgba(255,255,255,.85);line-height:1.7;
+}
+
+/* FOOTER */
+#footer{background:var(--black);border-top:1px solid rgba(255,255,255,.06);padding:64px 0 40px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:48px}
+@media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.footer-grid{grid-template-columns:1fr}}
+.footer-brand img{height:30px;width:auto;margin-bottom:16px}
+.footer-brand p{font-size:14px;color:#999;line-height:1.7;max-width:260px}
+.footer-col h4{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col a{font-size:14px;color:#999;transition:color .2s}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:28px;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-copy{font-size:13px;color:#888}
+.footer-disc{font-size:11px;color:#666;line-height:1.7;max-width:700px}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" aria-label="Ace Algo home" class="nav-logo">
+      <img src="https://i.ibb.co/fzv8dPxb/Blue-white.png" alt="Ace Algo" width="150" height="52" loading="eager">
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/#how">How It Works</a></li>
+      <li><a href="/#performance">Performance</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li class="nav-cta-li"><a href="https://app.iclosed.io/e/acealgo/ace-algo-advisory-call">Apply Now</a></li>
+    </ul>
+    <a href="https://app.iclosed.io/e/acealgo/ace-algo-advisory-call" class="nav-cta nav-cta-desktop" id="nav-cta-desktop">Apply Now</a>
+    <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<div class="page-wrap">
+  <span class="page-eyebrow">Legal</span>
+  <h1 class="page-title">Privacy Policy</h1>
+  <p class="page-meta">Ace Algo Ltd &nbsp;·&nbsp; <span>Last updated: June 2025</span></p>
+
+  <div class="policy">
+
+    <div class="highlight-box">
+      This Privacy Policy explains how Ace Algo Ltd ("Ace Algo", "we", "us", "our") collects, uses, stores and protects your personal data when you visit our website at acealgo.ai or interact with our services. Please read this policy carefully. By using our website or services, you agree to the practices described below.
+    </div>
+
+    <h2>1. Who We Are</h2>
+    <p>Ace Algo Ltd is a company registered in England and Wales. We operate an AI-powered algorithmic trading software platform that connects to clients' own regulated brokerage accounts.</p>
+    <p>For any data protection enquiries, you can contact us at: <a href="https://wa.me/447462123336">WhatsApp</a> or via our website.</p>
+
+    <h2>2. What Data We Collect</h2>
+    <p>We may collect and process the following categories of personal data:</p>
+    <ul>
+      <li><strong>Identity data</strong> — your name, as provided when submitting an application or booking a call</li>
+      <li><strong>Contact data</strong> — email address, phone number</li>
+      <li><strong>Application data</strong> — answers to our pre-qualification questions, investment background, and capital information you voluntarily provide</li>
+      <li><strong>Technical data</strong> — IP address, browser type, device information, pages visited, time spent on pages, referral source</li>
+      <li><strong>Marketing data</strong> — your preferences regarding receiving marketing communications from us</li>
+      <li><strong>Communications data</strong> — records of correspondence with us via email, WhatsApp, or other channels</li>
+    </ul>
+    <p>We do not collect or store payment card details. We do not have access to your brokerage account funds at any time.</p>
+
+    <h2>3. How We Collect Your Data</h2>
+    <p>We collect data through the following means:</p>
+    <ul>
+      <li>When you submit an application form on our website</li>
+      <li>When you book a call through our booking system (iClosed)</li>
+      <li>When you contact us directly via WhatsApp, email, or other channels</li>
+      <li>Automatically through cookies and analytics tools when you visit our website</li>
+      <li>Through Meta (Facebook/Instagram) advertising when you interact with our ads</li>
+    </ul>
+
+    <h2>4. How We Use Your Data</h2>
+    <p>We use your personal data for the following purposes:</p>
+    <ul>
+      <li>To process your application and determine eligibility for our services</li>
+      <li>To schedule and conduct advisory calls</li>
+      <li>To communicate with you about your application, onboarding, or service updates</li>
+      <li>To send pre-call resources, performance updates, and relevant information</li>
+      <li>To improve our website, services, and marketing effectiveness</li>
+      <li>To comply with legal and regulatory obligations</li>
+      <li>To measure and optimise our advertising campaigns</li>
+    </ul>
+    <p>We will only use your data for purposes you would reasonably expect, or where we have your consent or a legitimate legal basis to do so.</p>
+
+    <h2>5. Legal Basis for Processing</h2>
+    <p>We process your personal data under the following legal bases:</p>
+    <ul>
+      <li><strong>Contract</strong> — processing is necessary to provide our services to you</li>
+      <li><strong>Legitimate interests</strong> — for business operations, marketing, fraud prevention and improving our services</li>
+      <li><strong>Consent</strong> — where you have explicitly opted in to receive marketing communications</li>
+      <li><strong>Legal obligation</strong> — where we are required to process data to comply with applicable law</li>
+    </ul>
+
+    <h2>6. Data Sharing</h2>
+    <p>We do not sell your personal data. We may share your data with trusted third parties who assist in delivering our services, including:</p>
+    <ul>
+      <li><strong>GoHighLevel (GHL)</strong> — our CRM and communications platform</li>
+      <li><strong>iClosed</strong> — our call booking and pipeline management system</li>
+      <li><strong>Meta Platforms</strong> — for advertising optimisation via Pixel and Conversions API</li>
+      <li><strong>Wistia</strong> — for video hosting and analytics</li>
+      <li><strong>Vercel</strong> — for website hosting</li>
+    </ul>
+    <p>All third-party providers are contractually required to handle your data in accordance with applicable data protection law. We do not share your data with any other third parties without your consent, except where required by law.</p>
+
+    <h2>7. Cookies and Tracking</h2>
+    <p>Our website uses cookies and similar tracking technologies to improve your experience and measure the effectiveness of our advertising.</p>
+    <p>We use the following types of cookies:</p>
+    <ul>
+      <li><strong>Essential cookies</strong> — required for the website to function properly</li>
+      <li><strong>Analytics cookies</strong> — to understand how visitors use our site</li>
+      <li><strong>Advertising cookies</strong> — including the Meta Pixel, to measure ad performance and optimise campaigns</li>
+    </ul>
+    <p>You can control cookies through your browser settings. Disabling certain cookies may affect the functionality of our website.</p>
+
+    <h2>8. Data Retention</h2>
+    <p>We retain your personal data only for as long as necessary for the purposes outlined in this policy, or as required by law. Specifically:</p>
+    <ul>
+      <li>Application and contact data is retained for up to 3 years from last contact</li>
+      <li>Client records are retained for 6 years following the end of our relationship, in line with UK legal requirements</li>
+      <li>Website analytics data is retained in accordance with our analytics provider's standard retention periods</li>
+    </ul>
+
+    <h2>9. Data Security</h2>
+    <p>We take appropriate technical and organisational measures to protect your personal data against unauthorised access, loss, destruction or alteration. This includes secure data transmission, access controls, and regular security reviews of our systems and third-party providers.</p>
+    <p>However, no method of transmission over the internet is 100% secure. While we strive to protect your data, we cannot guarantee absolute security.</p>
+
+    <h2>10. Your Rights</h2>
+    <p>Under UK GDPR and the Data Protection Act 2018, you have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Right of access</strong> — to request a copy of the personal data we hold about you</li>
+      <li><strong>Right to rectification</strong> — to request correction of inaccurate or incomplete data</li>
+      <li><strong>Right to erasure</strong> — to request deletion of your data where there is no compelling reason for us to continue processing it</li>
+      <li><strong>Right to restrict processing</strong> — to request that we limit how we use your data</li>
+      <li><strong>Right to data portability</strong> — to receive your data in a structured, machine-readable format</li>
+      <li><strong>Right to object</strong> — to object to processing based on legitimate interests or for direct marketing purposes</li>
+      <li><strong>Rights related to automated decision-making</strong> — to not be subject to solely automated decisions that significantly affect you</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us via <a href="https://wa.me/447462123336">WhatsApp</a>. We will respond within 30 days. You also have the right to lodge a complaint with the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>.</p>
+
+    <h2>11. International Data Transfers</h2>
+    <p>Some of our third-party service providers may be based outside the UK or EEA. Where we transfer data internationally, we ensure appropriate safeguards are in place, such as Standard Contractual Clauses approved by the relevant authority, to protect your data to the same standard required under UK law.</p>
+
+    <h2>12. Children's Privacy</h2>
+    <p>Our services are not directed at individuals under the age of 18. We do not knowingly collect personal data from children. If we become aware that we have inadvertently collected data from a minor, we will take steps to delete it promptly.</p>
+
+    <h2>13. Links to Third-Party Sites</h2>
+    <p>Our website may contain links to third-party websites, including our broker partner Vantage Markets and Trustpilot. This Privacy Policy does not apply to those sites and we are not responsible for their privacy practices. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+
+    <h2>14. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will post the updated policy on this page with a revised "last updated" date. We encourage you to review this page periodically.</p>
+
+    <h2>15. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or how we handle your personal data, please contact us:</p>
+    <p>
+      <strong>Ace Algo Ltd</strong><br>
+      Registered in England and Wales<br>
+      Website: <a href="https://acealgo.ai">acealgo.ai</a><br>
+      WhatsApp: <a href="https://wa.me/447462123336">+44 7462 123336</a>
+    </p>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container" style="max-width:var(--max-w);margin:0 auto;padding:0 var(--pad-x)">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://i.ibb.co/fzv8dPxb/Blue-white.png" alt="Ace Algo" width="100" loading="lazy">
+        <p>A fully automated AI trading algorithm for investors who want their capital working harder — without the charts, the stress, or the screen time.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="/#how">How It Works</a></li>
+          <li><a href="/#performance">Performance</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="https://app.iclosed.io/e/acealgo/ace-algo-advisory-call">Apply Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://www.trustpilot.com/review/acealgo.ai" target="_blank" rel="noopener">Reviews</a></li>
+          <li><a href="https://wa.me/447462123336" target="_blank" rel="noopener">Contact</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Ace Algo Ltd. All rights reserved. United Kingdom.</p>
+      <p class="footer-disc">Risk Warning: Trading CFDs and forex carries a high level of risk and may not be suitable for all investors. Past performance is not indicative of future results. The value of your investments can go down as well as up. You could lose some or all of your invested capital. This website does not constitute financial advice. Ace Algo is not a regulated financial advisor.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle=document.getElementById('nav-toggle');
+  var links=document.getElementById('nav-links');
+  if(toggle){
+    toggle.addEventListener('click',function(){links.classList.toggle('open')});
+    links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open')})});
+  }
+  window.addEventListener('scroll',function(){
+    document.getElementById('nav').style.background=window.scrollY>50?'rgba(0,0,0,0.97)':'rgba(0,0,0,0.88)';
+  },{passive:true});
+})();
+</script>
+</body>
+</html>
